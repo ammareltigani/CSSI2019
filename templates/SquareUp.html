@@ -1,28 +1,9 @@
 <!DOCTYPE html>
 <head>
   <title>Square Up</title>
-  <script src="game.js"></script>
+  <link rel="stylesheet" href="grid-style.css">
 </head>
 <body>
-  <style>
-  #grid {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2vw;
-    }
-  #grid > div {
-    font-size: 5vw;
-    padding: .5em;
-    background: gold;
-    text-align: center;
-  }
-  #grid.clicked {
-    background-color: blue;
-    font-weight: bold;
-    color: red;
-  }
-  </style>
   <div id="grid">
     <div>1</div>
     <div>2</div>
@@ -34,4 +15,5 @@
     <div>8</div>
     <div>9</div>
   </div>
+  <script src="game.js"></script>
 </body>
