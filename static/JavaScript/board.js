@@ -12,7 +12,7 @@ for (let r = 1; r < node_boxes.length; r+=2){
   let letter = this_box.innerHTML;
   this_box.addEventListener("keydown", event =>{
     if (event.key == letter)
-      this_box.style.background = "black";
+      changeBoxColor("black", this_box);
   })
 }
 
