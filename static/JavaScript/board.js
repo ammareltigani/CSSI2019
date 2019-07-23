@@ -6,14 +6,22 @@ function changeBoxColor(color, box){
   box.innerHtml = '';
 }
 
+window.addEventListener("keydown", event =>{
+  for ( let r = 1; r < node_boxes.length; r+=2)
+  {
+    let letter = node_boxes[r].innerHTML;
+    letter.className = "innerHTML-style";
+    if (event.key == letter && node_boxes[r].style.backgroundColor!= "black")
+    {
+      changeBoxColor("black", node_boxes[r]);
+      break;
+    }
+  }
+})
+
 for (let r = 1; r < node_boxes.length; r+=2){
   let this_box = node_boxes[r];
   this_box.innerHTML = generateString(node_boxes);
-  let letter = this_box.innerHTML;
-  this_box.addEventListener("keydown", event =>{
-    if (event.key == letter)
-      changeBoxColor("black", this_box);
-  })
 }
 
 function generateString(box)
