@@ -7,12 +7,13 @@ jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-class MainHandler(webapp2.RequestHandler):
+class GridHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write("Welcome to Square-Up!")
+        grid = jinja_env.get_template("templates/SquareUp.html")
+        self.response.write(grid.render())
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler),
-    
+    ('/', GridHandler),
+
     ],
     debug=True)
