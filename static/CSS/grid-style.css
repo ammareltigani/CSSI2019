@@ -1,10 +1,22 @@
+body{
+}
+
+
 #all_boxes {
-  width: 900px;
-  height: 700px;
-  border: 15px solid green;
+  width: 824px;
+  height: 635px;
+  border: 15px solid black;
   margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #all_boxes > div {
-  background-color: gold;
+  background-color: white;
+  border-radius: 2px;
+  border-color: black;
+  border-style: solid;
+  width: 200px;
+  height: 100px;
 }
