@@ -17,29 +17,3 @@ body {
   padding: 20px;
   font-size: 125%;
 }
-
-.one {
-  grid-column: 1 / 3;
-  grid-row: 1;
-}
-.two {
-  grid-column: 2 / 4;
-  grid-row: 1 / 3;
-}
-.three {
-  grid-column: 1;
-  grid-row: 2 / 5;
-}
-
-.four {
-  grid-column: 3;
-  grid-row: 3;
-}
-.five {
-  grid-column: 2;
-  grid-row: 4;
-}
-.six {
-  grid-column: 3;
-  grid-row: 4;
-}
