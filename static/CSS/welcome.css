@@ -1,36 +1,41 @@
+body {background-color: yellow;}
+
 h1 {
+  margin: 0 auto;
   text-align: center;
   color: black;
   display: inline-block;
-  padding: 80px 90px;
+  padding: 170px 450px;
   color: red;
-  font-size: 50px;
+  font-size: 100px;
 }
 
 #username_box{
-  padding: 10px 20px;
+  padding: 30px 80px;
   border: 6px solid black;
   margin: 15px;
+  text-align: left;
   background-color: blue;
   border-radius: 5px;
   color: yellow;
-  font-size: 15px;
+  font-size: 30px;
   opacity: 0.85;
 }
 
 #level_box{
-  padding: 10px 20px;
+  padding: 30px 80px;
   border: 6px solid black;
   margin: 15px;
+  text-align: center;
   background-color: blue;
   border-radius: 5px;
   color: yellow;
-  font-size: 15px;
+  font-size: 30px;
   opacity: 0.85;
 }
 
 #submit_button {
-  padding: 30px 50px;
+  padding: 30px 80px;
   border: 6px solid black;
   margin: 30px;
   background-color: blue;
