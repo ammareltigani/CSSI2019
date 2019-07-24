@@ -50,7 +50,7 @@ let temp_string = "";
 
 window.addEventListener("keydown", event =>{
   if (event.key === "Backspace"){
-    temp_string = temp_string.splice(0, -1);
+    temp_string = temp_string.substring(0, temp_string.length - 1);
   }
   else{
     temp_string += event.key;
