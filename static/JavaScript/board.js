@@ -33,9 +33,8 @@ var x = setInterval(function() {
 
 
 function checkForBox(nodeBoxes, player_color, word){
-  for ( let r = 1; r < nodeBoxes.length; r+=2){
+  for ( let r = 0; r < nodeBoxes.length; r++){
     let letter = nodeBoxes[r].innerHTML;
-    letter = "String".fontSize(30);
     if (word == letter && nodeBoxes[r].style.backgroundColor!= player_color)
     {
       return nodeBoxes[r];
@@ -74,13 +73,11 @@ function changeBoxColor(color, box){
 var x = document.getElementById("txtbox");
 const grid = document.querySelector('#all_boxes');
 let node_boxes_node = grid.childNodes;
-// let node_boxes = Array.from(node_boxes_node);
 
 let node_boxes = [];
 for(let i = 1; i < node_boxes_node.length; i +=2){
   node_boxes.push(node_boxes_node[i]);
 }
-console.log(node_boxes);
 
 
 let filled_boxes = [];
@@ -90,7 +87,6 @@ function generateTiles(){
     let this_index = giveMeRandIndex(node_boxes);
     let this_box = node_boxes[this_index];
     filled_boxes.push(this_box);
-    console.log(filled_boxes);
     this_box.innerHTML = generateString();
     node_boxes.splice(this_index, 1);
   }
@@ -108,10 +104,8 @@ window.addEventListener("keydown", event =>{
   }
   else{
     temp_string += event.key;
-    console.log(temp_string)
   }
   let found_box = checkForBox(filled_boxes, "red", temp_string.toLowerCase());
-  console.log(found_box.toString());
   if(found_box != false)
   {
     changeBoxColor("blue",found_box);
