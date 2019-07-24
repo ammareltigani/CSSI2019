@@ -5,7 +5,7 @@ h1 {
   text-align: center;
   color: black;
   display: inline-block;
-  padding: 180px 450px;
+  padding: 170px 500px;
   color: red;
   font-size: 100px;
 }
@@ -13,7 +13,7 @@ h1 {
 #username_box{
   padding: 30px 80px;
   border: 6px solid black;
-  margin: 15px;
+  margin: 55px;
   text-align: left;
   background-color: blue;
   border-radius: 5px;
@@ -37,10 +37,22 @@ h1 {
 #submit_button {
   padding: 30px 80px;
   border: 6px solid black;
-  margin: 30px;
+  margin: 40px;
   background-color: blue;
   border-radius: 50px;
   color: yellow;
   font-size: 30px;
   opacity: 0.85;
 }
+
+#colorPicker{
+  width: 100px;
+  height: 50px;
+}
+
+#box {
+  width: 200px;
+  height: 200px;
+  padding: 8px 70px;
+  font-size: 40px;
+  font:"Lucida Grande"

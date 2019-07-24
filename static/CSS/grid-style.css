@@ -1,6 +1,19 @@
 body{
 }
 
+body {
+    background-color: royalblue;
+}
+
+#background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: red;
+    z-index: 0;
+}
 
 #all_boxes {
   width: 824px;
@@ -13,6 +26,7 @@ body{
 }
 
 #all_boxes > div {
+  position: relative;
   background-color: #99ccff;
   border-radius: 2px;
   border-color: black;
