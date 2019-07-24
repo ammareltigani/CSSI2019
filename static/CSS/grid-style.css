@@ -19,6 +19,8 @@ body {
   width: 824px;
   height: 635px;
   border: 15px solid black;
+  position: relative;
+  z-index:1;
   margin: 0 auto;
   margin-top: 30px;
   display: flex;
