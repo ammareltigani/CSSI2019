@@ -13,7 +13,6 @@ function generateString(){
                   "value", "daffy", "hug", "sob", "pushy", "organic", "lawyer", "shoe", "like", "prohibit", "hour",
                   "roasted", "mass", "imminent", "robin", "song", "sweat", "upbeat", "toys", "view", "put", "trap",
                   "include", "half", "train", "smooth"]
-
   return random_words[rand];
 }
 
@@ -30,8 +29,7 @@ function checkForBox(nodeBoxes, player_color, word){
 }
 
 function giveMeRandIndex(nodeBoxes){
-  rand_index = Math.floor((Math.random() * nodeBoxes.length/2) -1);
-  rand_index = (rand_index * 2) +1
+  rand_index = Math.floor((Math.random() * nodeBoxes.length));
   return rand_index;
 }
 
@@ -60,21 +58,32 @@ function changeBoxColor(color, box){
 var x = document.getElementById("txtbox");
 const grid = document.querySelector('#all_boxes');
 let node_boxes_node = grid.childNodes;
-let node_boxes = Array.from(node_boxes_node);
+// let node_boxes = Array.from(node_boxes_node);
+
+let node_boxes = [];
+for(let i = 1; i < node_boxes_node.length; i +=2){
+  node_boxes.push(node_boxes_node[i]);
+}
+console.log(node_boxes);
+
 
 let filled_boxes = [];
-
+let interval;
 function generateTiles(){
-  if (node_boxes.length > 0) {
+  if (node_boxes.length > 0){
     let this_index = giveMeRandIndex(node_boxes);
     let this_box = node_boxes[this_index];
     filled_boxes.push(this_box);
+    console.log(filled_boxes);
     this_box.innerHTML = generateString();
     node_boxes.splice(this_index, 1);
   }
+  else{
+    clearInterval(interval);
+  }
 }
 
-setInterval(generateTiles, 500);
+interval = setInterval(generateTiles, 1000);
 
 let temp_string = "";
 window.addEventListener("keydown", event =>{
