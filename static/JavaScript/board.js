@@ -12,10 +12,10 @@ function generateString(box){
 function checkForBox(nodeBoxes, player_color, word){
   for ( let r = 1; r < nodeBoxes.length; r+=2){
     let letter = nodeBoxes[r].innerHTML;
-    if (word == letter && nodeBoxes[r].style.backgroundColor!= "black")
+    if (word == letter && nodeBoxes[r].style.backgroundColor!= player_color)
     {
       changeBoxColor(player_color, nodeBoxes[r]);
-      break;
+      return;
     }
   }
 }
@@ -46,7 +46,6 @@ window.addEventListener("keydown", event =>{
   if (event.key === "Enter"){
     checkForBox(node_boxes, "blue", temp_string.toLowerCase());
     temp_string = "";
-    console.log(temp_string)
   }
   else{
     temp_string += event.key;
