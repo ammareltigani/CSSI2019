@@ -12,7 +12,7 @@ body {
     width: 50%;
     height: 100%;
     background-color: red;
-    z-index: 0;
+    z-index: -2;
 }
 
 #all_boxes {
@@ -29,10 +29,21 @@ body {
 
 #all_boxes > div {
   position: relative;
-  background-color: #99ccff;
+  background-color: white;
   border-radius: 2px;
   border-color: black;
   border-style: solid;
   width: 200px;
   height: 100px;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  z-index: 3;
 }
