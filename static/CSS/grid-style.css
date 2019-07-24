@@ -42,7 +42,7 @@ body {
 
 #all_boxes > div {
   position: relative;
-  background-color: #99ccff;
+  background-color: white;
   border-radius: 2px;
   border-color: black;
   border-style: solid;
@@ -58,6 +58,6 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  z-index: 3;
   text-align: center;
-  left: 80px;
 }
