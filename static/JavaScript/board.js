@@ -3,9 +3,9 @@ function generateString(){
   rand = Math.floor((Math.random() * 114));
   random_words = ["humorous","star","touch","minister","river","brown","horse","parcel","murmur","choose",
                   "notice","swot","care","shop","quick","smell","possessive","faulty","disagreeable",
-                  "station","bit","cup","pan","type","obnoxious","abounding", "crave", "jeans", "work",
+                  "station","bit", "kiwi", "cup","pan","type","obnoxious","abounding", "crave", "jeans", "city", "work",
                   "ceaseless", "correspond", "seat", "superficial", "steadfast", "paint", "pacify", "snakes",
-                  "mighty", "elegant", "sneeze", "cap", "police", "fowl", "lead", "idea", "flowery", "huge",
+                  "mighty", "wombat", "elegant", "sneeze", "cap", "police", "fowl", "lead", "idea", "flowery", "huge",
                   "stove", "wrench", "aloof", "gash", "birthday", "goofy", "river", "dye", "jar", "hit", "stage",
                   "leather", "admire", "squirrel", "snake", "dress", "scarf", "power", "brawny", "close", "walk",
                   "sweat", "dive", "rings", "beast", "spongebob", "oven", "push", "quit", "back", "body", "third",
@@ -90,7 +90,7 @@ window.addEventListener("keydown", event =>{
   let found_box = checkForBox(filled_boxes, "red", temp_string.toLowerCase());
   console.log(found_box.toString());
   if(found_box != false){
-    changeBoxColor("blue",found_box);
+    changeBoxColor("orange",found_box);
     temp_string = "";
     txtbox.value = "";
     return;

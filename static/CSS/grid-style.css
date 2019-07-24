@@ -5,6 +5,17 @@ body {
     background-color: royalblue;
 }
 
+#text{
+    position: fixed;
+    top: 0px;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    z-index: 5;
+    font-size: 25px;
+    color: white;
+}
+
 #background {
     position: fixed;
     top: 0px;
@@ -16,13 +27,15 @@ body {
 }
 
 #all_boxes {
+  top: 0px;
+  bottom: 10px;
   width: 824px;
   height: 635px;
   border: 15px solid black;
   position: relative;
   z-index:1;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
 }
