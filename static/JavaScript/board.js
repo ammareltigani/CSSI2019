@@ -1,10 +1,16 @@
 
 function generateString(box){
-  rand = Math.floor((Math.random() * 25));
+  rand = Math.floor((Math.random() * 90));
   random_words = ["humorous","star","touch","minister","river","brown","horse","parcel","murmur","choose",
                   "notice","swot","care","shop","quick","smell","possessive","faulty","disagreeable",
                   "station","bit","cup","pan","type","obnoxious","abounding", "crave", "jeans", "work",
-                  "ceaseless", "correspond", "seat","superficial", "steadfast", "paint"]
+                  "ceaseless", "correspond", "seat", "superficial", "steadfast", "paint", "pacify", "snakes",
+                  "mighty", "elegant", "sneeze", "cap", "police", "fowl", "lead", "idea", "flowery", "huge",
+                  "stove", "wrench", "aloof", "gash", "birthday", "goofy", "river", "dye", "jar", "hit", "stage",
+                  "leather", "admire", "squirrel", "snake", "dress", "scarf", "power", "brawny", "close", "walk",
+                  "sweat", "dive", "rings", "beast", "spongebob", "oven", "push", "quit", "back", "body", "third",
+                  "fretful", "avoid", "woozy", "bow", "owe", "bumpy", "resonant", "grip", "glass", "instrument",
+                  "value", "daffy"]
 
   return word = random_words[rand];
 }
@@ -56,5 +62,5 @@ window.addEventListener("keydown", event =>{
     changeBoxColor("blue",found_box);
     temp_string = "";
     return;
-  }  
+  }
 })
