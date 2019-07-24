@@ -18,6 +18,7 @@ function generateString(box){
 function checkForBox(nodeBoxes, player_color, word){
   for ( let r = 1; r < nodeBoxes.length; r+=2){
     let letter = nodeBoxes[r].innerHTML;
+    letter = "String".fontSize(30);
     if (word == letter && nodeBoxes[r].style.backgroundColor!= player_color)
     {
       return nodeBoxes[r];
@@ -37,7 +38,7 @@ function changeBoxColor(color, box){
 
 
 
-
+var x = document.getElementById("txtbox");
 const grid = document.querySelector('#all_boxes')
 let node_boxes = grid.childNodes;
 
@@ -58,9 +59,12 @@ window.addEventListener("keydown", event =>{
   }
   let found_box = checkForBox(node_boxes, "blue", temp_string.toLowerCase());
   console.log(found_box.toString());
-  if(found_box != false){
+  if(found_box != false)
+  {
     changeBoxColor("blue",found_box);
     temp_string = "";
+    x.value = "";
+    event.preventDefault();
     return;
   }
 })
