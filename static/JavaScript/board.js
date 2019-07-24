@@ -10,7 +10,6 @@ window.addEventListener("keydown", event =>{
   for ( let r = 1; r < node_boxes.length; r+=2)
   {
     let letter = node_boxes[r].innerHTML;
-    letter.className = "innerHTML-style";
     if (event.key == letter && node_boxes[r].style.backgroundColor!= "black")
     {
       changeBoxColor("black", node_boxes[r]);
@@ -24,114 +23,10 @@ for (let r = 1; r < node_boxes.length; r+=2){
   this_box.innerHTML = generateString(node_boxes);
 }
 
-function generateString(box)
-{
-  for ( let c = 1; c < box.length; c+=2)
-  {
-    ran = Math.floor((Math.random() * 25));
-    if (ran == 0)
-    {
-      return 'A';
-    }
-    else if (ran == 1)
-    {
-      return 'B';
-    }
-    else if (ran == 2)
-    {
-      return 'C';
-    }
-    else if (ran == 3)
-    {
-      return 'D';
-    }
-    else if (ran == 4)
-    {
-      return 'E';
-    }
-    else if (ran == 5)
-    {
-      return 'F';
-    }
-    else if (ran == 6)
-    {
-      return 'G';
-    }
-    else if (ran == 7)
-    {
-      return 'H';
-    }
-    else if (ran == 8)
-    {
-      return 'I';
-    }
-    else if (ran == 9)
-    {
-      return 'J';
-    }
-    else if (ran == 10)
-    {
-      return 'K';
-    }
-    else if (ran == 11)
-    {
-      return 'L';
-    }
-    else if (ran == 12)
-    {
-      return 'M';
-    }
-    else if (ran == 13)
-    {
-      return 'N';
-    }
-    else if (ran == 14)
-    {
-      return 'O';
-    }
-    else if (ran == 15)
-    {
-      return 'P';
-    }
-    else if (ran == 16)
-    {
-      return 'Q';
-    }
-    else if (ran == 17)
-    {
-      return 'R';
-    }
-    else if (ran == 18)
-    {
-      return 'S';
-    }
-    else if (ran == 19)
-    {
-      return 'T';
-    }
-    else if (ran == 20)
-    {
-      return 'U';
-    }
-    else if (ran == 21)
-    {
-      return 'V';
-    }
-    else if (ran == 22)
-    {
-      return 'W';
-    }
-    else if (ran == 23)
-    {
-      return 'X';
-    }
-    else if (ran == 24)
-    {
-      return 'Y';
-    }
-    else if (ran == 25)
-    {
-      return 'Z';
-    }
-  }
+function generateString(box){
+  rand = Math.floor((Math.random() * 25));
+  random_words = ["humorous","star","touch","minister","river","brown","horse","parcel","murmur","choose","notice",
+                  "swot","care","shop","quick","smell","possessive","faulty","disagreeable","station","bit","cup",
+                  "pan","type","obnoxious"]
+  return random_words[rand];
 }
