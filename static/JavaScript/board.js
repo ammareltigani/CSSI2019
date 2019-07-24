@@ -14,10 +14,10 @@ function checkForBox(nodeBoxes, player_color, word){
     let letter = nodeBoxes[r].innerHTML;
     if (word == letter && nodeBoxes[r].style.backgroundColor!= player_color)
     {
-      changeBoxColor(player_color, nodeBoxes[r]);
-      return;
+      return nodeBoxes[r];
     }
   }
+  return false;
 }
 
 function changeBoxColor(color, box){
@@ -43,12 +43,18 @@ for (let r = 1; r < node_boxes.length; r+=2){
 let temp_string = "";
 
 window.addEventListener("keydown", event =>{
-  if (event.key === "Enter"){
-    checkForBox(node_boxes, "blue", temp_string.toLowerCase());
-    temp_string = "";
+  if (event.key === "Backspace"){
+    temp_string = temp_string.splice(0, -1);
   }
   else{
     temp_string += event.key;
     console.log(temp_string)
   }
+  let found_box = checkForBox(node_boxes, "blue", temp_string.toLowerCase());
+  console.log(found_box.toString());
+  if(found_box != false){
+    changeBoxColor("blue",found_box);
+    temp_string = "";
+    return;
+  }  
 })
