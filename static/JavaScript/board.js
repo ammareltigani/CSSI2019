@@ -10,7 +10,7 @@ function generateString(box){
                   "leather", "admire", "squirrel", "snake", "dress", "scarf", "power", "brawny", "close", "walk",
                   "sweat", "dive", "rings", "beast", "spongebob", "oven", "push", "quit", "back", "body", "third",
                   "fretful", "avoid", "woozy", "bow", "owe", "bumpy", "resonant", "grip", "glass", "instrument",
-                  "value", "daffy", "wild"]
+                  "value", "daffy", "holiday", "wild"]
 
   return word = random_words[rand];
 }
@@ -59,7 +59,7 @@ window.addEventListener("keydown", event =>{
   let found_box = checkForBox(node_boxes, "blue", temp_string.toLowerCase());
   console.log(found_box.toString());
   if(found_box != false){
-    changeBoxColor("blue",found_box);
+    changeBoxColor("orange",found_box);
     temp_string = "";
     return;
   }
