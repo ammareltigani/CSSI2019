@@ -46,15 +46,6 @@ function changeBoxColor(color, box){
 
 
 
-<<<<<<< HEAD
-var x = document.getElementById("txtbox");
-const grid = document.querySelector('#all_boxes')
-let node_boxes = grid.childNodes;
-=======
-
->>>>>>> ddc82fe3ae7a59b24740d7ffabe91d98ad249d22
-
-
 
 
 
@@ -96,19 +87,12 @@ window.addEventListener("keydown", event =>{
   }
   let found_box = checkForBox(filled_boxes, "red", temp_string.toLowerCase());
   console.log(found_box.toString());
-<<<<<<< HEAD
   if(found_box != false)
   {
     changeBoxColor("blue",found_box);
     temp_string = "";
     x.value = "";
     event.preventDefault();
-=======
-  if(found_box != false){
-    changeBoxColor("orange",found_box);
-    temp_string = "";
-    txtbox.value = "";
->>>>>>> ddc82fe3ae7a59b24740d7ffabe91d98ad249d22
     return;
   }
 })
