@@ -5,15 +5,15 @@ h1 {
   text-align: center;
   color: black;
   display: inline-block;
-  padding: 170px 500px;
+  padding: 140px 450px;
   color: red;
   font-size: 105px;
 }
 
 #username_box{
-  padding: 30px 80px;
+  padding: 15px 70px;
   border: 6px solid black;
-  margin: 45px;
+  margin: 35px;
   text-align: left;
   background-color: blue;
   border-radius: 5px;
@@ -23,7 +23,7 @@ h1 {
 }
 
 #level_box{
-  padding: 30px 80px;
+  padding: 15px 70px;
   border: 6px solid black;
   margin: 10px;
   text-align: center;
@@ -53,6 +53,6 @@ h1 {
 #box {
   width: 200px;
   height: 200px;
-  padding: 8px 50px;
+  padding: 2px 50px;
   font-size: 40px;
   font:"Lucida Grande"
