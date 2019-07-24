@@ -61,3 +61,14 @@ input[type=text], select {
   z-index: 3;
   text-align: center;
 }
+
+#timebox {
+  position: relative;
+  background-color: white;
+  border-radius: 2px;
+  border-color: black;
+  border-style: solid;
+  width: 200px;
+  height: 100px;
+  display: inline-block;
+}

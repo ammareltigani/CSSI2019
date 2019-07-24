@@ -16,6 +16,22 @@ function generateString(){
   return random_words[rand];
 }
 
+//timer on top
+var x = setInterval(function() {
+  var distance = countDownDate - now;
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("timebox").innerHTML = minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timebox").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+
 function checkForBox(nodeBoxes, player_color, word){
   for ( let r = 1; r < nodeBoxes.length; r+=2){
     let letter = nodeBoxes[r].innerHTML;
