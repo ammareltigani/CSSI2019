@@ -67,6 +67,22 @@ function changeURL(to) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var text_box = document.getElementById("txtbox");
 const grid = document.querySelector('#all_boxes');
 let node_boxes_node = grid.childNodes;
@@ -137,6 +153,9 @@ let temp_string = "";
 window.addEventListener("keydown", event =>{
   if (event.key === "Backspace"){
     temp_string = temp_string.substring(0, temp_string.length - 1);
+  }
+  else if(event.key === "Enter"){
+    temp_string += "";
   }
   else{
     temp_string += event.key;
