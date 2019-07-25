@@ -14,7 +14,7 @@ function generateString(){
                   "roasted", "mass", "imminent", "robin", "song", "sweat", "upbeat", "toys", "view", "put", "trap",
                   "include", "half", "train", "smooth", "handle", "rustic", "direful","foolish","woozy","whistle",
                   "time","guard","malicious","wool","breath","creator","spot","juicy","boast","recess","respect",
-                  "hobbies","used","trick","abusive","frog","hug","gainful","nail","rub","kiss","include","whole",
+                  "hobbies","used","trick","frog","hug","gainful","nail","rub","kiss","include","whole",
                   "green","snails","test","tail","great","bless","encourage","grandiose","exotic","jail","confused",
                   'weigh',"trust","insurance","caption","skin","curved","judicious",'describe',"hallowed","contain"]
   rand = Math.floor((Math.random() * random_words.length));
