@@ -114,7 +114,7 @@ function timer()
     {
       is_done = true;
       clearInterval();
-      time_box.innerHTML = "Time Up!";
+      time_box.innerHTML = "EXPIRED";
       changeURL("");
     }
     else
