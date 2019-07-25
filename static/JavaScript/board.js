@@ -43,6 +43,11 @@ function changeBoxColor(color, box){
   box.innerHtml = '';
 }
 
+function changeURL(to) {
+       var theURL = window.location.pathname;
+       window.location.href = theURL.replace("game", to);
+}
+
 
 
 
@@ -69,7 +74,7 @@ var time_box = document.getElementById("timebox");
 
 let min = 1;
 let sec = 0;
-let is_done = "no";
+let is_done = false;
 let counter = setInterval(timer, 1000);
 
 
@@ -91,9 +96,10 @@ function timer()
     }
     else if (sec == 0 && min == 0)
     {
-       clearInterval();
-       time_box.innerHTML = "Expired";
-       return;
+      is_done = true;
+      clearInterval();
+      time_box.innerHTML = "Expired";
+      changeURL("");
     }
     else
     {
@@ -102,6 +108,8 @@ function timer()
     }
   }
 }
+
+
 
 let node_boxes = [];
 for(let i = 1; i < node_boxes_node.length; i +=2){
@@ -135,11 +143,12 @@ window.addEventListener("keydown", event =>{
   }
   text_box.innerHTML = temp_string;
   let found_box = checkForBox(filled_boxes, color, temp_string.toLowerCase());
-  if(found_box != false)
+  if(found_box)
   {
     changeBoxColor(color,found_box);
     temp_string = "";
     text_box.value = "";
+    text_box.innerHTML = ">" + temp_string;
     event.preventDefault();
   }
 })
