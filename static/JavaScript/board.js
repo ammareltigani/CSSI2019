@@ -64,7 +64,7 @@ var y = document.getElementById("timebox");
 
 var timeleft = 60;
 var downloadTimer = setInterval(function(){
-  y.innerHTML = timeleft + " seconds remaining";
+  y.innerHTML = timeleft + "s";
   timeleft -= 1;
   if(timeleft<= 0){
     clearInterval(downloadTimer);
