@@ -50,10 +50,7 @@ body {
   width: 200px;
   height: 100px;
   text-align: center;
-<<<<<<< HEAD
-=======
   font-family: 'Press Start 2P';
->>>>>>> fdd651785f41f13ab99a23a674cdc5c834e6452f
 }
 
 input[type=text], select {
@@ -78,9 +75,6 @@ input[type=text], select {
   height: 100px;
   display: inline-block;
   left: 610px;
-<<<<<<< HEAD
-  text-align: center;
-=======
   text-align: center;font-family: 'Press Start 2P';
 }
 
@@ -91,7 +85,6 @@ input[type=text], select {
     font-weight: normal;
     font-style: normal;
 
->>>>>>> fdd651785f41f13ab99a23a674cdc5c834e6452f
 }
 
 #txtbox {
