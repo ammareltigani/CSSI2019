@@ -59,12 +59,26 @@ function changeBoxColor(color, box){
 var x = document.getElementById("txtbox");
 const grid = document.querySelector('#all_boxes');
 let node_boxes_node = grid.childNodes;
+var y = document.getElementById("timebox");
+
+
+var timeleft = 60;
+var downloadTimer = setInterval(function(){
+  y.innerHTML = timeleft + " seconds remaining";
+  timeleft -= 1;
+  if(timeleft<= 0){
+    clearInterval(downloadTimer);
+    y.innerHTML = "Finished";
+  }
+}, 1000)
+
+
+
 
 let node_boxes = [];
 for(let i = 1; i < node_boxes_node.length; i +=2){
   node_boxes.push(node_boxes_node[i]);
 }
-
 
 let filled_boxes = [];
 let interval;
