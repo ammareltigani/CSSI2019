@@ -51,7 +51,7 @@ body {
 }
 
 input[type=text], select {
-  width: 100%;
+  width: 60%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -59,4 +59,5 @@ input[type=text], select {
   border-radius: 4px;
   box-sizing: border-box;
   z-index: 3;
+  text-align: center;
 }
