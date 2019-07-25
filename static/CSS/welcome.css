@@ -23,6 +23,7 @@ h1 {
   color: yellow;
   font-size: 30px;
   opacity: 0.85;
+  font-family: 'Press Start 2P';
 }
 
 #level_box{
@@ -35,6 +36,7 @@ h1 {
   color: yellow;
   font-size: 30px;
   opacity: 0.85;
+  font-family: 'Press Start 2P';
 }
 
 #submit_button {
@@ -46,6 +48,7 @@ h1 {
   color: yellow;
   font-size: 30px;
   opacity: 0.85;
+  font-family: 'Press Start 2P';
 }
 
 #colorPicker{
@@ -58,7 +61,7 @@ h1 {
   height: 200px;
   padding: 2px 50px;
   font-size: 40px;
-  font:"Lucida Grande"
+  font-family: 'Press Start 2P';
 }
 
   #dog {
