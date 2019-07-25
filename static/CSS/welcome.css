@@ -15,9 +15,9 @@ h1 {
 
 #rectangle{
   padding-left: 1px;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-right: 1px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 
 #gif_background {
@@ -30,7 +30,7 @@ h1 {
 #username_box{
   padding: 25px 25px;
   border: 6px solid black;
-  margin-top: 350px;
+  margin-top: 290px;
   margin-left: 70px;
   margin-right: 40px;
   margin-bottom: 25px;
