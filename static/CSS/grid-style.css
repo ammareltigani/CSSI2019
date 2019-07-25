@@ -48,6 +48,7 @@ body {
   border-style: solid;
   width: 200px;
   height: 100px;
+  text-align: center;
 }
 
 input[type=text], select {
@@ -72,4 +73,14 @@ input[type=text], select {
   height: 100px;
   display: inline-block;
   left: 610px;
+  text-align: center;
+}
+
+@font-face {
+    font-family: 'arcadeclassicregular';
+    src: url('arcadeclassic-webfont.woff2') format('woff2'),
+         url('arcadeclassic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
