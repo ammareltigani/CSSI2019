@@ -89,6 +89,7 @@ var text_box = document.getElementById("txtbox");
 const grid = document.querySelector('#all_boxes');
 let node_boxes_node = grid.childNodes;
 var time_box = document.getElementById("timebox");
+var bot_box = document.getElementById("botbox");
 
 let min = 1;
 let sec = 0;
@@ -193,6 +194,7 @@ function botClicker()
     changeBoxColor(bot_color,wordd);
     temp_string = "";
     bot_box_count++;
+    bot_box.innerHTML = bot_box_count;
   }
   else
   {

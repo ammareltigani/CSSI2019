@@ -101,3 +101,18 @@ input[type=text], select {
   margin-top: 60px;
   font-family: 'Press Start 2P';
 }
+
+#botbox {
+  position: relative;
+  background-color: red;
+  border-radius: 2px;
+  border-color: black;
+  border-style: solid;
+  width: 225px;
+  left: 1150px;
+  top: -95px;
+  text-align: center;
+  font-family: 'Press Start 2P';
+  padding: 17px 0;
+  height: 30px;
+}
