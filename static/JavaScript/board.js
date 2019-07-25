@@ -194,7 +194,7 @@ function botClicker()
     changeBoxColor(bot_color,wordd);
     temp_string = "";
     bot_box_count++;
-    bot_box.innerHTML = bot_box_count;
+    bot_box.innerHTML = "Opponent's box count: " + bot_box_count;
   }
   else
   {
