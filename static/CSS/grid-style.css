@@ -98,5 +98,6 @@ input[type=text], select {
 
 #txtbox {
   background-color: white;
+  margin-top: 60px;
   font-family: 'Press Start 2P';
 }
