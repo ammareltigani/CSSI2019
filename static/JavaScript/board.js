@@ -1,6 +1,4 @@
-
 function generateString(){
-  rand = Math.floor((Math.random() * 114));
   random_words = ["humorous","star","touch","minister","river","brown","horse","parcel","murmur","choose",
                   "notice","swot","care","shop","quick","smell","possessive","faulty","disagreeable",
                   "station","bit", "kiwi", "cup","pan","type","obnoxious","abounding", "crave", "jeans", "city", "work",
@@ -13,9 +11,9 @@ function generateString(){
                   "value", "daffy", "hug", "sob", "pushy", "organic", "lawyer", "shoe", "like", "prohibit", "hour",
                   "roasted", "mass", "imminent", "robin", "song", "sweat", "upbeat", "toys", "view", "put", "trap",
                   "include", "half", "train", "smooth"]
+  rand = Math.floor((Math.random() * random_words.length));
   return random_words[rand];
 }
-
 
 
 function checkForBox(nodeBoxes, player_color, word){
@@ -23,7 +21,9 @@ function checkForBox(nodeBoxes, player_color, word){
     let letter = nodeBoxes[r].innerHTML;
     if (word == letter && nodeBoxes[r].style.backgroundColor!= player_color)
     {
-      return nodeBoxes[r];
+      let box = nodeBoxes[r]
+      nodeBoxes.splice(r, 1);
+      return box;
     }
   }
   return false;
