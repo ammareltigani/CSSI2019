@@ -67,7 +67,6 @@ let counter =setInterval(timer, 1000);
 
 function timer()
 {
-  debugger;
   if (sec > 9)
   {
     y.innerHTML = min + ":" + sec;
