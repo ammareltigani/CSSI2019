@@ -10,7 +10,11 @@ function generateString(){
                   "fretful", "avoid", "woozy", "bow", "owe", "bumpy", "resonant", "grip", "glass", "instrument",
                   "value", "daffy", "hug", "sob", "pushy", "organic", "lawyer", "shoe", "like", "prohibit", "hour",
                   "roasted", "mass", "imminent", "robin", "song", "sweat", "upbeat", "toys", "view", "put", "trap",
-                  "include", "half", "train", "smooth"]
+                  "include", "half", "train", "smooth", "handle", "rustic", "direful","foolish","woozy","whistle",
+                  "time","guard","malicious","wool","breath","creator","spot","juicy","boast","recess","respect",
+                  "hobbies","used","trick","abusive","frog","hug","gainful","nail","rub","kiss","include","whole",
+                  "green","snails","test","tail","great","bless","encourage","grandiose","exotic","jail","confused",
+                  'weigh',"trust","insurance","caption","skin","curved","judicious",'describe',"hallowed","contain"]
   rand = Math.floor((Math.random() * random_words.length));
   return random_words[rand];
 }
@@ -56,6 +60,8 @@ function changeBoxColor(color, box){
 
 
 
+
+
 var text_box = document.getElementById("txtbox");
 const grid = document.querySelector('#all_boxes');
 let node_boxes_node = grid.childNodes;
@@ -63,7 +69,9 @@ var time_box = document.getElementById("timebox");
 
 let min = 1;
 let sec = 0;
+let is_done = "no";
 let counter = setInterval(timer, 1000);
+
 
 function timer()
 {
@@ -71,7 +79,6 @@ function timer()
   {
     time_box.innerHTML = min + ":" + sec;
     sec-=1;
-    return;
   }
   else if (sec <= 9)
   {
@@ -81,7 +88,6 @@ function timer()
 
       min -= 1;
       sec = 59;
-      return;
     }
     else if (sec == 0 && min == 0)
     {
@@ -96,7 +102,6 @@ function timer()
     }
   }
 }
-
 
 let node_boxes = [];
 for(let i = 1; i < node_boxes_node.length; i +=2){
@@ -118,7 +123,7 @@ function generateTiles(){
   }
 }
 
-interval = setInterval(generateTiles, 1000);
+interval = setInterval(generateTiles, 1500);
 
 let temp_string = "";
 window.addEventListener("keydown", event =>{
@@ -136,6 +141,5 @@ window.addEventListener("keydown", event =>{
     temp_string = "";
     text_box.value = "";
     event.preventDefault();
-    return;
   }
 })
