@@ -114,7 +114,7 @@ function timer()
     {
       is_done = true;
       clearInterval();
-      time_box.innerHTML = "Expired";
+      time_box.innerHTML = "GAME OVER";
       changeURL("");
     }
     else
