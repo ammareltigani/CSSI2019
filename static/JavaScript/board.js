@@ -61,18 +61,42 @@ const grid = document.querySelector('#all_boxes');
 let node_boxes_node = grid.childNodes;
 var y = document.getElementById("timebox");
 
+let min = 1;
+let sec = 0;
+let counter =setInterval(timer, 1000);
 
-var timeleft = 60;
-var downloadTimer = setInterval(function(){
-  y.innerHTML = timeleft + "s";
-  timeleft -= 1;
-  if(timeleft<= 0){
-    clearInterval(downloadTimer);
-    y.innerHTML = "Finished";
+function timer()
+{
+  debugger;
+  if (sec > 9)
+  {
+    y.innerHTML = min + ":" + sec;
+    sec-=1;
+    return;
   }
-}, 1000)
+  else if (sec <= 9)
+  {
+    y.innerHTML = min + ":0" + sec;
+    if (sec == 0 && min !== 0)
+    {
 
-
+      min -= 1;
+      sec = 59;
+      return;
+    }
+    else if (sec == 0 && min == 0)
+    {
+       clearInterval();
+       y.innerHTML = "Expired";
+       return;
+    }
+    else
+    {
+      sec -=1;
+      return;
+    }
+  }
+}
 
 
 let node_boxes = [];
