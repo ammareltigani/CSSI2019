@@ -73,3 +73,7 @@ input[type=text], select {
   display: inline-block;
   left: 610px;
 }
+
+#txtbox {
+  background-color: white;
+}

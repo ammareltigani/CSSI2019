@@ -56,26 +56,26 @@ function changeBoxColor(color, box){
 
 
 
-var x = document.getElementById("txtbox");
+var text_box = document.getElementById("txtbox");
 const grid = document.querySelector('#all_boxes');
 let node_boxes_node = grid.childNodes;
-var y = document.getElementById("timebox");
+var time_box = document.getElementById("timebox");
 
 let min = 1;
 let sec = 0;
-let counter =setInterval(timer, 1000);
+let counter = setInterval(timer, 1000);
 
 function timer()
 {
   if (sec > 9)
   {
-    y.innerHTML = min + ":" + sec;
+    time_box.innerHTML = min + ":" + sec;
     sec-=1;
     return;
   }
   else if (sec <= 9)
   {
-    y.innerHTML = min + ":0" + sec;
+    time_box.innerHTML = min + ":0" + sec;
     if (sec == 0 && min !== 0)
     {
 
@@ -86,7 +86,7 @@ function timer()
     else if (sec == 0 && min == 0)
     {
        clearInterval();
-       y.innerHTML = "Expired";
+       time_box.innerHTML = "Expired";
        return;
     }
     else
@@ -128,12 +128,13 @@ window.addEventListener("keydown", event =>{
   else{
     temp_string += event.key;
   }
+  text_box.innerHTML = temp_string;
   let found_box = checkForBox(filled_boxes, color, temp_string.toLowerCase());
   if(found_box != false)
   {
     changeBoxColor(color,found_box);
     temp_string = "";
-    x.value = "";
+    text_box.value = "";
     event.preventDefault();
     return;
   }
