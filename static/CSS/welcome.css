@@ -7,15 +7,17 @@ h1 {
   display: block;
   overflow: hidden;
   white-space: nowrap;
-  padding: 30px 140px;
+  padding: 30px 50px;
   color: white;
   font-size: 90px;
   font-family: 'Press Start 2P', cursive;
 }
 
 #rectangle{
-  background-color: blue;
-  padding: 2px 0px;
+  padding-left: 1px;
+  padding-top: 20px;
+  padding-right: 1px;
+  padding-bottom: 20px;
 }
 
 #gif_background {
@@ -28,7 +30,7 @@ h1 {
 #username_box{
   padding: 15px 25px;
   border: 6px solid black;
-  margin-top: 320px;
+  margin-top: 380px;
   margin-left: 70px;
   margin-right: 40px;
   text-align: left;
