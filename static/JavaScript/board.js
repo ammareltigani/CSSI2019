@@ -61,31 +61,39 @@ const grid = document.querySelector('#all_boxes');
 let node_boxes_node = grid.childNodes;
 var y = document.getElementById("timebox");
 
-let counter =setInterval(timer(1,0), 1000);
+let min = 1;
+let sec = 0;
+let counter =setInterval(timer, 1000);
 
-function timer(min, sec)
+function timer()
 {
+  debugger;
   if (sec > 9)
   {
     y.innerHTML = min + ":" + sec;
     sec-=1;
     return;
   }
-  else if (sec < 10)
+  else if (sec <= 9)
   {
     y.innerHTML = min + ":0" + sec;
     if (sec == 0 && min !== 0)
     {
 
       min -= 1;
-      sec += 59;
+      sec = 59;
       return;
     }
     else if (sec == 0 && min == 0)
     {
-       clearInterval(counter);
+       clearInterval();
        y.innerHTML = "Expired";
        return;
+    }
+    else
+    {
+      sec -=1;
+      return;
     }
   }
 }
