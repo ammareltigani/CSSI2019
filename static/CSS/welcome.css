@@ -1,21 +1,21 @@
 body {background-color: yellow;}
 
 h1 {
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
   color: black;
   display: block;
   overflow: hidden;
   white-space: nowrap;
-  padding: 150px 240px;
+  padding: 30px 140px;
   color: white;
   font-size: 90px;
   font-family: 'Press Start 2P', cursive;
 }
 
-#header{
+#rectangle{
   background-color: blue;
-  padding: 2px 50px;
+  padding: 2px 0px;
 }
 
 #gif_background {
@@ -26,39 +26,43 @@ h1 {
 }
 
 #username_box{
-  padding: 15px 70px;
+  padding: 15px 25px;
   border: 6px solid black;
-  margin: 35px;
+  margin-top: 320px;
+  margin-left: 70px;
+  margin-right: 40px;
   text-align: left;
   background-color: blue;
   border-radius: 5px;
   color: white;
-  font-size: 15px;
+  font-size: 22px;
   opacity: 0.85;
   font-family: 'Press Start 2P';
 }
 
 #level_box{
-  padding: 15px 70px;
+  padding: 15px 25px;
   border: 6px solid black;
-  margin: 10px;
+  margin-top: 90px;
+  margin-right: 40px;
   text-align: center;
   background-color: blue;
   border-radius: 5px;
   color: white;
-  font-size: 15px;
+  font-size: 18px;
   opacity: 0.85;
   font-family: 'Press Start 2P';
 }
 
 #submit_button {
-  padding: 30px 80px;
+  padding: 30px 30px;
   border: 6px solid black;
-  margin: 40px;
+  margin-top: 90px;
+  margin-right: 40px;
   background-color: blue;
   border-radius: 50px;
   color: white;
-  font-size: 15px;
+  font-size: 18px;
   opacity: 0.85;
   font-family: 'Press Start 2P';
 }
@@ -71,8 +75,12 @@ h1 {
 #box {
   width: 200px;
   height: 200px;
-  padding: 2px 50px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 5px;
   font-size: 20px;
   font-family: 'Press Start 2P';
   color: white;
+  margin-bottom: 20px;
+  margin-left: 70px;
 }
