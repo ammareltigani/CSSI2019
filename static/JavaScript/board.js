@@ -105,10 +105,10 @@ window.addEventListener("keydown", event =>{
   else{
     temp_string += event.key;
   }
-  let found_box = checkForBox(filled_boxes, "red", temp_string.toLowerCase());
+  let found_box = checkForBox(filled_boxes, color, temp_string.toLowerCase());
   if(found_box != false)
   {
-    changeBoxColor("blue",found_box);
+    changeBoxColor(color,found_box);
     temp_string = "";
     x.value = "";
     event.preventDefault();

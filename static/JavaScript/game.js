@@ -4,6 +4,8 @@ let box = document.getElementById("box");
 let output = document.getElementById("output");
 
 box.style.borderColor = colorPicker.value;
+let playerColor = document.querySelector("#background");
+playerColor.style.backgroundColor = colorPicker.value;
 
 colorPicker.addEventListener("input", function(event) {
   box.style.borderColor = event.target.value;

@@ -4,10 +4,11 @@
   <link rel="stylesheet" href="static/CSS/grid-style.css">
 </head>
 <body>
-  <p id="text">Player: {{ name }} </br> Level: {{ level }}</p>
+  <p id="text">Player: {{ name }} </br> Level: {{ level }} </br> Color: {{ color }}</p>
+  <script> color= "{{ color }}" </script>
   </div>
   <p id="timebox"></p>
-  <div id="background"></div>
+  <div id="background" style="background-color: {{ color }}" ></div>
   <div id="all_boxes" style="font-size: 30px";>
     <div></div>
     <div></div>
