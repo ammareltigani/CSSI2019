@@ -28,11 +28,12 @@ h1 {
 }
 
 #username_box{
-  padding: 15px 25px;
+  padding: 25px 25px;
   border: 6px solid black;
-  margin-top: 380px;
+  margin-top: 350px;
   margin-left: 70px;
   margin-right: 40px;
+  margin-bottom: 25px;
   text-align: left;
   background-color: blue;
   border-radius: 5px;
@@ -43,7 +44,7 @@ h1 {
 }
 
 #level_box{
-  padding: 15px 25px;
+  padding: 25px 25px;
   border: 6px solid black;
   margin-top: 90px;
   margin-right: 40px;
@@ -57,7 +58,7 @@ h1 {
 }
 
 #submit_button {
-  padding: 30px 30px;
+  padding: 35px 30px;
   border: 6px solid black;
   margin-top: 90px;
   margin-right: 40px;
@@ -77,12 +78,13 @@ h1 {
 #box {
   width: 200px;
   height: 200px;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-left: 10px;
   padding-bottom: 5px;
-  font-size: 20px;
+  font-size: 25px;
   font-family: 'Press Start 2P';
   color: white;
   margin-bottom: 20px;
   margin-left: 70px;
+  margin-top: 50px;
 }
