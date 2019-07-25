@@ -171,3 +171,29 @@ window.addEventListener("keydown", event =>{
     event.preventDefault();
   }
 })
+
+
+
+//bot timeeee
+
+let tempbot_string = "";
+let counterr = setInterval(botClicker, 2000);
+let bot_color = "purple";
+var bot_box_count = 0;
+
+function botClicker()
+{
+  let thisIndex = giveMeRandIndex(node_boxes);
+  let wordd = node_boxes[thisIndex];
+  let fondBox = checkForBox(node_boxes, bot_color, temp_string.toLowerCase());
+  if (fondBox)
+  {
+    changeBoxColor(bot_color,wordd);
+    temp_string = "";
+    bot_box_count++;
+  }
+  else
+  {
+    tempbot_string += wordd;
+  }
+}
