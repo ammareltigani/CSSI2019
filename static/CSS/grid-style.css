@@ -27,6 +27,7 @@ body {
     z-index: -2;
 }
 
+
 #all_boxes {
   top: 0px;
   bottom: 5px;
@@ -53,6 +54,11 @@ body {
   font-family: 'Press Start 2P';
   padding: 22.5px 0px;
 
+}
+
+img{
+  position: fixed;
+  top: 410px;
 }
 
 input[type=text], select {
