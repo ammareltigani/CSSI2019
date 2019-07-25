@@ -30,8 +30,8 @@ body {
 #all_boxes {
   top: 0px;
   bottom: 10px;
-  width: 824px;
-  height: 635px;
+  width: 840px;
+  height: 550px;
   border: 15px solid black;
   position: relative;
   z-index:1;
@@ -47,8 +47,8 @@ body {
   border-radius: 2px;
   border-color: black;
   border-style: solid;
-  width: 200px;
-  height: 100px;
+  width: 204px;
+  height: 86px;
   text-align: center;
   font-family: 'Press Start 2P';
 }
@@ -62,7 +62,7 @@ input[type=text], select {
   border-radius: 4px;
   box-sizing: border-box;
   z-index: 3;
-  text-align: center;
+  text-align: justify;
 }
 
 #timebox {
@@ -72,10 +72,12 @@ input[type=text], select {
   border-color: black;
   border-style: solid;
   width: 200px;
-  height: 100px;
+  height: 10px;
   display: inline-block;
   left: 610px;
-  text-align: center;font-family: 'Press Start 2P';
+  text-align: center;
+  font-family: 'Press Start 2P';
+  padding: 40px 40px;
 }
 
 @font-face {
