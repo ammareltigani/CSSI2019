@@ -49,6 +49,7 @@ body {
   width: 200px;
   height: 100px;
   text-align: center;
+  font-family: 'arcadeclassicregular';
 }
 
 input[type=text], select {
@@ -74,6 +75,7 @@ input[type=text], select {
   display: inline-block;
   left: 610px;
   text-align: center;
+  font-family: 'arcadeclassicregular';
 }
 
 @font-face {
