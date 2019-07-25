@@ -14,6 +14,7 @@ body {
     z-index: 5;
     font-size: 25px;
     color: black;
+    font-family: 'Press Start 2P';
 }
 
 #background {
@@ -49,7 +50,7 @@ body {
   width: 200px;
   height: 100px;
   text-align: center;
-  font-family: 'arcadeclassicregular';
+  font-family: 'Press Start 2P';
 }
 
 input[type=text], select {
@@ -74,8 +75,7 @@ input[type=text], select {
   height: 100px;
   display: inline-block;
   left: 610px;
-  text-align: center;
-  font-family: 'arcadeclassicregular';
+  text-align: center;font-family: 'Press Start 2P';
 }
 
 @font-face {
