@@ -44,7 +44,7 @@ class LeaderboardHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', WelcomeHandler),
     ('/game', GameHandler),
-    ('/howtoplay', HowtoplayHandler)
-    ('/leaderboard', LeaderboardHandler)
+    ('/howtoplay', HowtoplayHandler),
+    ('/leaderboard', LeaderboardHandler),
     ],
     debug=True)
