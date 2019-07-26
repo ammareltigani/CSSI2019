@@ -7,14 +7,14 @@ h1 {
   display: block;
   overflow: hidden;
   white-space: nowrap;
-  padding: 30px 50px;
+  padding: 20px 50px;
   color: blue;
   font-size: 40px;
   font-family: 'Press Start 2P', cursive;
 }
 
 h2 {
-  margin: 2px;
+  margin: 1px;
   text-align: left;
   color: black;
   display: block;
@@ -43,6 +43,22 @@ h3 {
   font-family: 'Press Start 2P', cursive;
 }
 
+h5 {
+  text-align: left;
+  margin-top: -30px;
+  margin-bottom: 50px;
+  color: black;
+  display: block;
+  margin-left: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 2px 50px;
+  color: blue;
+  line-height: 38px;
+  font-size: 14px;
+  font-family: 'Press Start 2P', cursive;
+}
+
 #pikachu{
   position: relative;
   overflow: hidden;
@@ -50,7 +66,7 @@ h3 {
   width: 250px;
   height: 250px;
   left: 900px;
-  top: -170px;
+  top: -175px;
 }
 
 #bluepokemon{
@@ -60,5 +76,5 @@ h3 {
   width: 250px;
   height: 250px;
   left: 430px;
-  top: -160px;
+  top: -155px;
 }
