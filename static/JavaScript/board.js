@@ -73,7 +73,6 @@ var time_box = document.getElementById("timebox");
 var bot_box = document.getElementById("botbox");
 var player_box = document.getElementById("playerbox");
 var text_box = document.getElementById("txtbox");
-var player_box = document.getElementById("playerbox");
 var bot_color = "purple";
 
 
@@ -155,28 +154,13 @@ window.addEventListener("keydown", event =>{
   }
 })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 
 let bot_box_count = 0;
-let botChanger = setInterval(goBot, 2000);
-function goBot(){
-  let r = giveMeRandIndex(filled_boxes);
-  console.log(filled_boxes[r].innerHTML);
-  if (filled_boxes[r].style.backgroundColor != "purple"){
-    changeBoxColor("purple", filled_boxes[r]);
-    bot_box_count++;
-    bot_box.innerHTML = "Opponent's box count: " + bot_box_count;
-=======
-=======
-let bot_box_count;
->>>>>>> 97b49c95d9aa11f3b8568e25df0e78db6c8c2541
 let botChanger = setInterval(goBot, 1000);
 function goBot(){
   let r = giveMeRandIndex(filled_boxes);
-  if (filled_boxes[r].style.backgroundColor != color && filled_boxes[r].style.backgroundColor != "purple"){
+  if (filled_boxes[r].style.backgroundColor != color && filled_boxes[r].style.backgroundColor != "purple")
+  {
     changeBoxColor(bot_color, filled_boxes[r]);
     num_colored_boxes++;
     bot_box_count++;
@@ -186,8 +170,8 @@ function goBot(){
 
 let endgame = setInterval(allTilesClaimed, 1000);
 function allTilesClaimed(){
-  if(num_colored_boxes == original_length){
+  if(num_colored_boxes == original_length)
+  {
     changeURL("leaderboard");
->>>>>>> a8536af304770169513641775b0d1f1f2dca8b8c
   }
 }
