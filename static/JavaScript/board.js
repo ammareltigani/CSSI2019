@@ -145,7 +145,7 @@ window.addEventListener("keydown", event =>{
   {
     changeBoxColor(color,found_box);
     player_box_count++;
-    player_box.innerHTML = "Your box count: " + player_box_count;
+    player_box.innerHTML = "Your: " + player_box_count;
     num_colored_boxes++;
     temp_string = "";
     text_box.value = "";
@@ -156,7 +156,7 @@ window.addEventListener("keydown", event =>{
 
 
 let bot_box_count = 0;
-let botChanger = setInterval(goBot, 1000);
+let botChanger = setInterval(goBot, 2000);
 function goBot(){
   let r = giveMeRandIndex(filled_boxes);
   if (filled_boxes[r].style.backgroundColor != color && filled_boxes[r].style.backgroundColor != "purple")
@@ -164,11 +164,11 @@ function goBot(){
     changeBoxColor(bot_color, filled_boxes[r]);
     num_colored_boxes++;
     bot_box_count++;
-    bot_box.innerHTML = "Opponent's box count: " + bot_box_count;
+    bot_box.innerHTML = "Opponent: " + bot_box_count;
   }
 }
 
-let endgame = setInterval(allTilesClaimed, 1000);
+let endgame = setInterval(allTilesClaimed, 5000);
 function allTilesClaimed(){
   if(num_colored_boxes == original_length)
   {
