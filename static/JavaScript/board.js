@@ -65,6 +65,7 @@ for(let i = 1; i < node_boxes_node.length; i +=2){
 //getting the textbox, timebox, and botbox elements
 var time_box = document.getElementById("timebox");
 var bot_box = document.getElementById("botbox");
+var player_box = document.getElementById("playerbox");
 var text_box = document.getElementById("txtbox");
 
 
@@ -143,12 +144,14 @@ window.addEventListener("keydown", event =>{
 
 
 
-
+let bot_box_count = 0;
 let botChanger = setInterval(goBot, 2000);
 function goBot(){
   let r = giveMeRandIndex(filled_boxes);
   console.log(filled_boxes[r].innerHTML);
-  if (filled_boxes[r].style.backgroundColor != color){
+  if (filled_boxes[r].style.backgroundColor != "purple"){
     changeBoxColor("purple", filled_boxes[r]);
+    bot_box_count++;
+    bot_box.innerHTML = "Opponent's box count: " + bot_box_count;
   }
 }
