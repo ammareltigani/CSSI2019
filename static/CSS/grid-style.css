@@ -6,7 +6,7 @@ body {
 }
 
 #text{
-    position: fixed;
+    position: relative;
     top: 0px;
     left: 50px;
     width: 50%;
@@ -29,7 +29,7 @@ body {
 
 
 #all_boxes {
-  top: 0px;
+  top: -490px;
   bottom: 5px;
   width: 840px;
   height: 440px;
@@ -57,7 +57,7 @@ body {
 }
 
 img{
-  position: fixed;
+  position: relative;
   top: 410px;
 }
 
@@ -85,6 +85,7 @@ input[type=text], select {
   font-family: 'Press Start 2P';
   padding: 17px 0;
   height: 30px;
+  top: -100px;
 }
 
 @font-face {
@@ -97,9 +98,11 @@ input[type=text], select {
 }
 
 #txtbox {
+  position: relative;
   background-color: white;
-  margin-top: 60px;
+  margin-top: 30px;
   font-family: 'Press Start 2P';
+  top: -500px;
 }
 
 #botbox {
@@ -110,7 +113,7 @@ input[type=text], select {
   border-style: solid;
   width: 225px;
   left: 1175px;
-  top: 100px;
+  top: -7px;
   text-align: center;
   font-family: 'Press Start 2P';
   padding: 17px 0;
@@ -125,7 +128,7 @@ input[type=text], select {
   border-style: solid;
   width: 225px;
   left: 19px;
-  top: 14.5px;
+  top: -94px;
   text-align: center;
   font-family: 'Press Start 2P';
   padding: 17px 0;
