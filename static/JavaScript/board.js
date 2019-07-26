@@ -1,3 +1,5 @@
+//||Some functions that we will use in the gamer-runner code further below||//
+
 function generateString(){
   random_words = ["humorous","star","touch","minister","river","brown","horse","parcel","murmur","choose",
                   "notice","swot","care","shop","quick","smell","possessive","faulty",
@@ -19,8 +21,7 @@ function generateString(){
                   'weigh',"trust","insurance","caption","skin","curved","judicious",'describe',"hallowed","contain"]
   rand = Math.floor((Math.random() * random_words.length));
   return random_words[rand];
-}
-
+} //return random word from a list
 
 function checkForBox(nodeBoxes, player_color, word){
   for ( let r = 0; r < nodeBoxes.length; r++){
@@ -33,109 +34,73 @@ function checkForBox(nodeBoxes, player_color, word){
     }
   }
   return false;
-}
+} //check for string validity in array of boxes
 
 function giveMeRandIndex(nodeBoxes){
   rand_index = Math.floor((Math.random() * nodeBoxes.length));
   return rand_index;
-}
+}//returns a random index in the list of boxes
 
 function changeBoxColor(color, box){
   box.style.backgroundColor = color;
   box.innerHtml = '';
-}
+}//changes the color of a box to the user's color
 
 function changeURL(to) {
        var theURL = window.location.pathname;
        window.location.href = theURL.replace("game", to);
+}//redirects to the leaderboard page when (1) timer is done
+                          //(2) all boxes have been filled by either color
+
+
+
+//Creating the array of boxes
+const grid = document.querySelector('#all_boxes');
+var node_boxes_node = grid.childNodes;
+let node_boxes = [];
+for(let i = 1; i < node_boxes_node.length; i +=2){
+  node_boxes.push(node_boxes_node[i]);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var text_box = document.getElementById("txtbox");
-const grid = document.querySelector('#all_boxes');
-let node_boxes_node = grid.childNodes;
+//getting the textbox, timebox, and botbox elements
 var time_box = document.getElementById("timebox");
 var bot_box = document.getElementById("botbox");
+var text_box = document.getElementById("txtbox");
 
+
+//Timer variables
 let min = 1;
 let sec = 0;
 let is_done = false;
 let counter = setInterval(timer, 1000);
-
-
-function timer()
-{
-  if (sec > 9)
-  {
+//Timer function
+function timer(){
+  if (sec > 9){
     time_box.innerHTML = min + ":" + sec;
     sec-=1;
   }
-  else if (sec <= 9)
-  {
+  else if (sec <= 9){
     time_box.innerHTML = min + ":0" + sec;
-    if (sec == 0 && min !== 0)
-    {
-
+    if (sec == 0 && min !== 0){
       min -= 1;
       sec = 59;
     }
-    else if (sec == 0 && min == 0)
-    {
+    else if (sec == 0 && min == 0){
       is_done = true;
       clearInterval();
       time_box.innerHTML = "EXPIRED";
       changeURL("");
     }
-    else
-    {
+    else{
       sec -=1;
       return;
     }
   }
 }
 
-
-
-let node_boxes = [];
-for(let i = 1; i < node_boxes_node.length; i +=2){
-  node_boxes.push(node_boxes_node[i]);
-}
-
+//Creating an array for the boxes that have been populated
 let filled_boxes = [];
+//Generates tiles with intervals
 let interval;
 function generateTiles(){
   if (node_boxes.length > 0){
@@ -149,9 +114,9 @@ function generateTiles(){
     clearInterval(interval);
   }
 }
-
 interval = setInterval(generateTiles, 1500);
 
+//Event listener to get user input string and calls checkForBox and changeBoxColor
 let temp_string = "";
 window.addEventListener("keydown", event =>{
   if (event.key === "Backspace"){
@@ -177,27 +142,27 @@ window.addEventListener("keydown", event =>{
 
 
 
-//bot timeeee
-
-let tempbot_string = "";
-let counterr = setInterval(botClicker, 2000);
-let bot_color = "purple";
-var bot_box_count = 0;
-
-function botClicker()
-{
-  let thisIndex = giveMeRandIndex(node_boxes);
-  let wordd = node_boxes[thisIndex];
-  let fondBox = checkForBox(node_boxes, bot_color, temp_string.toLowerCase());
-  if (fondBox)
-  {
-    changeBoxColor(bot_color,wordd);
-    temp_string = "";
-    bot_box_count++;
-    bot_box.innerHTML = "Opponent's box count: " + bot_box_count;
-  }
-  else
-  {
-    tempbot_string += wordd;
-  }
-}
+// bot timeeee
+//
+// let tempbot_string = "";
+// let counterr = setInterval(botClicker, 2000);
+// let bot_color = "purple";
+// var bot_box_count = 0;
+//
+// function botClicker()
+// {
+//   let thisIndex = giveMeRandIndex(node_boxes);
+//   let wordd = node_boxes[thisIndex];
+//   let fondBox = checkForBox(node_boxes, bot_color, temp_string.toLowerCase());
+//   if (fondBox)
+//   {
+//     changeBoxColor(bot_color,wordd);
+//     temp_string = "";
+//     bot_box_count++;
+//     bot_box.innerHTML = "Opponent's box count: " + bot_box_count;
+//   }
+//   else
+//   {
+//     tempbot_string += wordd;
+//   }
+// }
