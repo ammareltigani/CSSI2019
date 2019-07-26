@@ -41,10 +41,16 @@ class LeaderboardHandler(webapp2.RequestHandler):
         lead_template=jinja_env.get_template("templates/leaderboard.html")
         self.response.write(lead_template.render())
 
+class AboutthecreatorsHandler(webapp2.RequestHandler):
+    def get(self):
+        start_template=jinja_env.get_template("templates/aboutthecreators.html")
+        self.response.write(start_template.render())
+        
 app = webapp2.WSGIApplication([
     ('/', WelcomeHandler),
     ('/game', GameHandler),
     ('/howtoplay', HowtoplayHandler),
     ('/leaderboard', LeaderboardHandler),
+    ('/aboutthecreators', AboutthecreatorsHandler)
     ],
     debug=True)
