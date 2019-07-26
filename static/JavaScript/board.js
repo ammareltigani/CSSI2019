@@ -56,17 +56,24 @@ function changeURL(to) {
 
 //Creating the array of boxes
 const grid = document.querySelector('#all_boxes');
-var node_boxes_node = grid.childNodes;
+let node_boxes_node = grid.childNodes;
 let node_boxes = [];
 for(let i = 1; i < node_boxes_node.length; i +=2){
   node_boxes.push(node_boxes_node[i]);
 }
+
+//Size of node_boxes
+let original_length = node_boxes.length;
+
+//Number of colored all_boxes
+let num_colored_boxes = 0;
 
 //getting the textbox, timebox, and botbox elements
 var time_box = document.getElementById("timebox");
 var bot_box = document.getElementById("botbox");
 var player_box = document.getElementById("playerbox");
 var text_box = document.getElementById("txtbox");
+var bot_color = "purple";
 
 
 //Timer variables
@@ -90,7 +97,7 @@ function timer(){
       is_done = true;
       clearInterval();
       time_box.innerHTML = "EXPIRED";
-      changeURL("");
+      changeURL("leaderboard");
     }
     else{
       sec -=1;
@@ -124,16 +131,19 @@ window.addEventListener("keydown", event =>{
     temp_string = temp_string.substring(0, temp_string.length - 1);
   }
   else if(event.key === "Enter"){
-    temp_string += "";
+    temp_string = "";
+    text_box.value = "";
+    text_box.innerHTML = "";
   }
   else{
     temp_string += event.key;
   }
   text_box.innerHTML = temp_string;
   let found_box = checkForBox(filled_boxes, color, temp_string.toLowerCase());
-  if(found_box)
+  if(found_box && found_box.style.backgroundColor != bot_color)
   {
     changeBoxColor(color,found_box);
+    num_colored_boxes++;
     temp_string = "";
     text_box.value = "";
     text_box.innerHTML = ">" + temp_string;
@@ -141,6 +151,7 @@ window.addEventListener("keydown", event =>{
   }
 })
 
+<<<<<<< HEAD
 
 
 
@@ -153,5 +164,20 @@ function goBot(){
     changeBoxColor("purple", filled_boxes[r]);
     bot_box_count++;
     bot_box.innerHTML = "Opponent's box count: " + bot_box_count;
+=======
+let botChanger = setInterval(goBot, 1000);
+function goBot(){
+  let r = giveMeRandIndex(filled_boxes);
+  if (filled_boxes[r].style.backgroundColor != color && filled_boxes[r].style.backgroundColor != "purple"){
+    changeBoxColor(bot_color, filled_boxes[r]);
+    num_colored_boxes++;
+  }
+}
+
+let endgame = setInterval(allTilesClaimed, 1000);
+function allTilesClaimed(){
+  if(num_colored_boxes == original_length){
+    changeURL("leaderboard");
+>>>>>>> a8536af304770169513641775b0d1f1f2dca8b8c
   }
 }
