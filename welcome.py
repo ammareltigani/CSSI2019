@@ -31,9 +31,14 @@ class GameHandler(webapp2.RequestHandler):
         game_template=jinja_env.get_template("templates/SquareUp.html")
         self.response.write(game_template.render(template_var))
 
+class HowtoplayHandler(webapp2.RequestHandler):
+    def get(self):
+        start_template=jinja_env.get_template("templates/howtoplay.html")
+        self.response.write(start_template.render())
+
 app = webapp2.WSGIApplication([
     ('/', WelcomeHandler),
-    ('/game', GameHandler)
-
+    ('/game', GameHandler),
+    ('/howtoplay', HowtoplayHandler)
     ],
     debug=True)

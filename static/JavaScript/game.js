@@ -14,3 +14,9 @@ colorPicker.addEventListener("input", function(event) {
 colorPicker.addEventListener("change", function(event) {
   output.innerText = "Color set to " + colorPicker.value + ".";
 }, false);
+
+let howtoplaybutton = document.getElementById("howtoplay_button");
+howtoplaybutton.addEventListener("onclick", () => {
+  var thisurl = window.location.pathname;
+  window.location.href = thisurl.replace("/", "/howtoplay");
+})
