@@ -14,7 +14,7 @@ h1 {
 }
 
 h2 {
-  margin: 0;
+  margin: 2px;
   text-align: left;
   color: black;
   display: block;
@@ -22,13 +22,14 @@ h2 {
   white-space: nowrap;
   padding: 30px 50px;
   color: blue;
-  line-height: 35px;
+  line-height: 38px;
   font-size: 22px;
   font-family: 'Press Start 2P', cursive;
 }
 
 h3 {
   margin: 0;
+  margin-left: -15px;
   text-align: left;
   color: black;
   display: block;
@@ -48,8 +49,8 @@ h3 {
   white-space: normal;
   width: 250px;
   height: 250px;
-  left: 850px;
-  top: -150px;
+  left: 900px;
+  top: -170px;
 }
 
 #bluepokemon{
@@ -58,6 +59,6 @@ h3 {
   position: relative;
   width: 250px;
   height: 250px;
-  left: 330px;
-  top: -150px;
+  left: 430px;
+  top: -160px;
 }
