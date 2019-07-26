@@ -1,4 +1,4 @@
-      //||Some functions that we will use in the gamer-runner code further below||//
+//                  ||Some functions that we will use in the gamer-runner code further below||              //
 
 function generateString(){
   random_words = ["humorous","star","touch","minister","river","brown","horse","parcel","murmur","choose",
@@ -53,6 +53,8 @@ function changeURL(to) {
                           //(1) timer runs out
                           //(2) all boxes have been filled a color
 
+//                                               ||Game runner||                                          //
+
 
 //Creating the array of boxes
 const grid = document.querySelector('#all_boxes');
@@ -74,7 +76,6 @@ var bot_box = document.getElementById("botbox");
 var player_box = document.getElementById("playerbox");
 var text_box = document.getElementById("txtbox");
 var bot_color = "purple";
-
 
 //Timer variables
 let min = 1;
@@ -153,7 +154,6 @@ window.addEventListener("keydown", event =>{
     event.preventDefault();
   }
 })
-
 
 let bot_box_count = 0;
 let botChanger = setInterval(goBot, 2000);
