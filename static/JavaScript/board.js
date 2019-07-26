@@ -1,4 +1,4 @@
-//||Some functions that we will use in the gamer-runner code further below||//
+      //||Some functions that we will use in the gamer-runner code further below||//
 
 function generateString(){
   random_words = ["humorous","star","touch","minister","river","brown","horse","parcel","murmur","choose",
@@ -72,6 +72,7 @@ let num_colored_boxes = 0;
 var time_box = document.getElementById("timebox");
 var bot_box = document.getElementById("botbox");
 var text_box = document.getElementById("txtbox");
+var player_box = document.getElementById("playerbox");
 var bot_color = "purple";
 
 
@@ -125,6 +126,7 @@ interval = setInterval(generateTiles, 1500);
 
 //Event listener to get user input string and calls checkForBox and changeBoxColor
 let temp_string = "";
+let player_box_count = 0;
 window.addEventListener("keydown", event =>{
   if (event.key === "Backspace"){
     temp_string = temp_string.substring(0, temp_string.length - 1);
@@ -142,6 +144,8 @@ window.addEventListener("keydown", event =>{
   if(found_box && found_box.style.backgroundColor != bot_color)
   {
     changeBoxColor(color,found_box);
+    player_box_count++;
+    player_box.innerHTML = "Your box count: " + player_box_count;
     num_colored_boxes++;
     temp_string = "";
     text_box.value = "";
@@ -150,12 +154,15 @@ window.addEventListener("keydown", event =>{
   }
 })
 
+let bot_box_count;
 let botChanger = setInterval(goBot, 1000);
 function goBot(){
   let r = giveMeRandIndex(filled_boxes);
   if (filled_boxes[r].style.backgroundColor != color && filled_boxes[r].style.backgroundColor != "purple"){
     changeBoxColor(bot_color, filled_boxes[r]);
     num_colored_boxes++;
+    bot_box_count++;
+    bot_box.innerHTML = "Opponent's box count: " + bot_box_count;
   }
 }
 
