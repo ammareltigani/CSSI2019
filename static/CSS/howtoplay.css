@@ -29,42 +29,35 @@ h2 {
 
 h3 {
   margin: 0;
-  text-align: center;
+  text-align: left;
   color: black;
   display: block;
   overflow: hidden;
   white-space: nowrap;
   padding: 30px 50px;
   color: blue;
-  font-size: 22px;
-  font-family: 'Press Start 2P', cursive;
-}
-
-h4 {
-  margin: 0;
-  text-align: center;
-  color: black;
-  display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 30px 50px;
-  color: blue;
-  font-size: 22px;
+  margin-top: 30px;
+  margin-right: 30px;
+  font-size: 28px;
   font-family: 'Press Start 2P', cursive;
 }
 
 #pikachu{
   position: relative;
   overflow: hidden;
-  white-space: nowrap;
-  left: 1000px;
-  top: 200px;
+  white-space: normal;
+  width: 250px;
+  height: 250px;
+  left: 850px;
+  top: -150px;
 }
 
 #bluepokemon{
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  left: 1000px;
-  top: 210px;
+  width: 250px;
+  height: 250px;
+  left: 330px;
+  top: -150px;
 }
