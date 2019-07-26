@@ -130,7 +130,9 @@ window.addEventListener("keydown", event =>{
     temp_string = temp_string.substring(0, temp_string.length - 1);
   }
   else if(event.key === "Enter"){
-    temp_string += "";
+    temp_string = "";
+    text_box.value = "";
+    text_box.innerHTML = "";
   }
   else{
     temp_string += event.key;
