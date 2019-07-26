@@ -146,7 +146,7 @@ window.addEventListener("keydown", event =>{
   {
     changeBoxColor(color,found_box);
     player_box_count++;
-    player_box.innerHTML = "Your: " + player_box_count;
+    player_box.innerHTML = "Your Points: " + player_box_count;
     num_colored_boxes++;
     temp_string = "";
     text_box.value = "";
