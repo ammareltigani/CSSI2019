@@ -30,7 +30,7 @@ body {
 
 
 #all_boxes {
-  top: -490px;
+  top: -450px;
   bottom: 5px;
   width: 840px;
   height: 440px;
@@ -103,7 +103,7 @@ input[type=text], select {
   background-color: white;
   margin-top: 30px;
   font-family: 'Press Start 2P';
-  top: -500px;
+  top: -400px;
 }
 
 #botbox {
