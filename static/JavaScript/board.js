@@ -49,9 +49,9 @@ function changeBoxColor(color, box){
 function changeURL(to) {
        var theURL = window.location.pathname;
        window.location.href = theURL.replace("game", to);
-}//redirects to the leaderboard page when (1) timer is done
-                          //(2) all boxes have been filled by either color
-
+}//redirects to the leaderboard page when:
+                          //(1) timer runs out
+                          //(2) all boxes have been filled a color
 
 
 //Creating the array of boxes
@@ -142,27 +142,13 @@ window.addEventListener("keydown", event =>{
 
 
 
-// bot timeeee
-//
-// let tempbot_string = "";
-// let counterr = setInterval(botClicker, 2000);
-// let bot_color = "purple";
-// var bot_box_count = 0;
-//
-// function botClicker()
-// {
-//   let thisIndex = giveMeRandIndex(node_boxes);
-//   let wordd = node_boxes[thisIndex];
-//   let fondBox = checkForBox(node_boxes, bot_color, temp_string.toLowerCase());
-//   if (fondBox)
-//   {
-//     changeBoxColor(bot_color,wordd);
-//     temp_string = "";
-//     bot_box_count++;
-//     bot_box.innerHTML = "Opponent's box count: " + bot_box_count;
-//   }
-//   else
-//   {
-//     tempbot_string += wordd;
-//   }
-// }
+
+
+let botChanger = setInterval(goBot, 2000);
+function goBot(){
+  let r = giveMeRandIndex(filled_boxes);
+  console.log(filled_boxes[r].innerHTML);
+  if (filled_boxes[r].style.backgroundColor != color){
+    changeBoxColor("purple", filled_boxes[r]);
+  }
+}
