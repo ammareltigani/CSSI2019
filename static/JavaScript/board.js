@@ -53,6 +53,10 @@ function changeURL(to) {
                           //(1) timer runs out
                           //(2) all boxes have been filled a color
 
+
+
+
+
 //                                               ||Game runner||                                          //
 
 

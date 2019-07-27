@@ -9,7 +9,12 @@
   </head>
   <body>
     <h1 id="rectangle"> Leaderboard </h1>
-    <p id="user">Username: {{ name }}</p>
-    <p id="level">Level: {{ level }}</p>
+    {% for round in lead %}
+      <p class="stats">Player: {{ round.name }}</p>
+        <p class="stats">Level: {{ round.level }}</p>
+        <p class="stats">Color: {{ round.color }}</p>
+        <p class="stats">Time: {{ round.time_date }}</p>
+      <br>
+    {% endfor %}
   </body>
 </html>
