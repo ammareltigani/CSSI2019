@@ -45,14 +45,17 @@ h1 {
 
 #level_box{
   padding: 25px 25px;
+  width: 435px;
+  height: 75px;
   border: 6px solid black;
-  margin-top: 90px;
+  margin-top: 70px;
+  margin-left: 12px;
   margin-right: 20px;
   text-align: center;
   background-color: blue;
   border-radius: 5px;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   opacity: 0.85;
   font-family: 'Press Start 2P';
 }
@@ -90,8 +93,9 @@ h1 {
 #submit_button {
   padding: 35px 30px;
   border: 6px solid black;
+  margin-left: 20px;
   margin-top: 90px;
-  margin-right: 40px;
+  margin-right: 20px;
   background-color: blue;
   border-radius: 50px;
   color: white;
