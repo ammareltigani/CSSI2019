@@ -1,13 +1,26 @@
 #rectangle {
   position: relative;
-  background-color: red;
+  background-color: blue;
   border-radius: 2px;
   border-color: black;
   border-style: solid;
-  width: 225px;
-  left: 610px;
+  width: 525px;
+  left: 450px;
+  color: white;
   text-align: center;
   font-family: 'Press Start 2P';
   padding: 17px 0;
   height: 30px;
+}
+
+#user{
+  margin-left:450px;
+  font-family: 'Press Start 2P';
+  font-size: 15px;
+}
+
+#level{
+  margin-left:450px;
+  font-family: 'Press Start 2P';
+  font-size: 15px;
 }
