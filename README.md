@@ -9,3 +9,5 @@ How to play Square Up!
   6. Players have 1 minute to type as many words and fill as many boxes with their color as possible.
   7. When time is up, the player with more boxes in their color wins!
   * We recommend using fullscreen for the best gaming experience.
+  
+  check out the deployed version at: https://squareup.appspot.com/
