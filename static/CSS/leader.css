@@ -13,13 +13,7 @@
   height: 30px;
 }
 
-#user{
-  margin-left:450px;
-  font-family: 'Press Start 2P';
-  font-size: 15px;
-}
-
-#level{
+.stats{
   margin-left:450px;
   font-family: 'Press Start 2P';
   font-size: 15px;
