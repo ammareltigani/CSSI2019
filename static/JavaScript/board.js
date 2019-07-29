@@ -18,7 +18,11 @@ function generateString(){
                   "time","guard","malicious","wool","breath","creator","spot","juicy","boast","recess","respect",
                   "hobbies","used","trick","frog","hug","gainful","nail","rub","kiss","include","whole",
                   "green","snails","test","tail","great","bless","encourage","grandiose","exotic","jail","confused",
-                  'weigh',"trust","insurance","caption","skin","curved","judicious",'describe',"hallowed","contain","rigid","instrument",  "sincere", "bottle", "actually", "sea", "spotted", "calm", "tall", "buzz", "rabbit", "flock", "jumpy", "scene", "weak","thin", "rural", "cemetery", "odd", "pain", "banana", "robin", "suit", "super", "zoo", "bash", "egg", "future", "kiss", "ocean", "savory", "handle", "club", "party", "infamous", "glorious", "tasteful", "succinct", "experience", "lush"]
+                  'weigh',"trust","insurance","caption","skin","curved","judicious",'describe',"hallowed","contain",
+                  "rigid","instrument",  "sincere", "bottle", "actually", "sea", "spotted", "calm", "tall", "buzz",
+                  "rabbit", "flock", "jumpy", "scene", "weak","thin", "rural", "cemetery", "odd", "pain", "banana",
+                  "robin", "suit", "super", "zoo", "bash", "egg", "future", "kiss", "ocean", "savory", "handle",
+                  "club", "party", "infamous", "glorious", "tasteful", "succinct", "experience", "lush"]
   rand = Math.floor((Math.random() * random_words.length));
   return random_words[rand];
 } //return random word from a list
