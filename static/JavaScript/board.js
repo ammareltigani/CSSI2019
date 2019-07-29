@@ -21,8 +21,8 @@ function generateString(){
                   'weigh',"trust","insurance","caption","skin","curved","judicious",'describe',"hallowed","contain",
                   "rigid","instrument",  "sincere", "bottle", "actually", "sea", "spotted", "calm", "tall", "buzz",
                   "rabbit", "flock", "jumpy", "scene", "weak","thin", "rural", "cemetery", "odd", "pain", "banana",
-                  "robin", "suit", "super", "zoo", "bash", "egg", "future", "kiss", "ocean", "savory", "handle",
-                  "club", "party", "infamous", "glorious", "tasteful", "succinct", "experience", "lush"]
+                  "robin", "suit", "super", "zoo", "bash", "egg", "future", "kiss", "ocean", "savory", "handle", "club",
+                  "party", "infamous", "glorious", "tasteful", "succinct", "experience", "lush"]
   rand = Math.floor((Math.random() * random_words.length));
   return random_words[rand];
 } //return random word from a list
@@ -56,8 +56,6 @@ function changeURL(to) {
 }//redirects to the leaderboard page when:
                           //(1) timer runs out
                           //(2) all boxes have been filled a color
-
-
 
 
 
@@ -176,10 +174,12 @@ function goBot(){
   }
 }
 
-let endgame = setInterval(allTilesClaimed, 5000);
+let endgame = setInterval(allTilesClaimed, 4000);
 function allTilesClaimed(){
   if(num_colored_boxes == original_length)
   {
-    changeURL("leaderboard");
+    let score = (player_box_count * 6) + (parseInt(time_box.innerHTML, 10) * 3);
+    console.log("Score: "+score);
+    changeURL("leaderboard?score=" + score);
   }
 }

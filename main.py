@@ -42,8 +42,8 @@ class HowtoplayHandler(webapp2.RequestHandler):
 
 class LeaderboardHandler(webapp2.RequestHandler):
     def get(self):
-
-        user_round = Round(name=leaderboard_vars["name"], level=leaderboard_vars["level"], color=leaderboard_vars["color"], time_date=leaderboard_vars["timestamp"])
+        score_string = str(self.request.get('score'))
+        user_round = Round(name=leaderboard_vars["name"], level=leaderboard_vars["level"], color=leaderboard_vars["color"], score=score_string, time_date=leaderboard_vars["timestamp"])
         user_round.put()
         all_rounds = Round.query().fetch()
         all_rounds.insert(0, user_round)
