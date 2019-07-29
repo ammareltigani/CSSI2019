@@ -103,7 +103,7 @@ function timer(){
       is_done = true;
       clearInterval();
       time_box.innerHTML = "EXPIRED";
-      changeURL("leaderboard");
+      changeURL("leaderboard?score=0");
     }
     else{
       sec -=1;
@@ -162,10 +162,10 @@ window.addEventListener("keydown", event =>{
 
 let bot_box_count = 0;
 let botChanger = setInterval(goBot, 2000);
+
 function goBot(){
   let r = giveMeRandIndex(filled_boxes);
-  if (filled_boxes[r].style.backgroundColor != color && filled_boxes[r].style.backgroundColor != "purple")
-  {
+  if (filled_boxes[r].style.backgroundColor != color && filled_boxes[r].style.backgroundColor != "purple"){
     changeBoxColor(bot_color, filled_boxes[r]);
     num_colored_boxes++;
     bot_box_count++;
