@@ -174,7 +174,7 @@ function goBot(){
   }
 }
 
-let endgame = setInterval(allTilesClaimed, 4000);
+let endgame = setInterval(allTilesClaimed, 500);
 function allTilesClaimed(){
   if(num_colored_boxes == original_length)
   {
