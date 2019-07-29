@@ -4,4 +4,4 @@ class Round(ndb.Model):
     level = ndb.StringProperty()
     color = ndb.StringProperty()
     score = ndb.StringProperty()
-    time_date = ndb.DateTimeProperty()
+    time_date = ndb.StringProperty()

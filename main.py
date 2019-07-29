@@ -22,7 +22,6 @@ class GameHandler(webapp2.RequestHandler):
         username = self.request.get('username')
         level = self.request.get('level')
         color = self.request.get("color")
-        dateTime_var =  datetime.datetime.now()
         template_var = {
             "name": username,
             "level": level,
@@ -31,7 +30,6 @@ class GameHandler(webapp2.RequestHandler):
         leaderboard_vars["name"] = username
         leaderboard_vars["level"] = level
         leaderboard_vars["color"] = color
-        leaderboard_vars["timestamp"] = dateTime_var
         game_template=jinja_env.get_template("templates/SquareUp.html")
         self.response.write(game_template.render(template_var))
 
@@ -43,7 +41,9 @@ class HowtoplayHandler(webapp2.RequestHandler):
 class LeaderboardHandler(webapp2.RequestHandler):
     def get(self):
         score_string = str(self.request.get('score'))
-        user_round = Round(name=leaderboard_vars["name"], level=leaderboard_vars["level"], color=leaderboard_vars["color"], score=score_string, time_date=leaderboard_vars["timestamp"])
+        time = datetime.datetime.now()
+        string_time = time.strftime("%c")
+        user_round = Round(name=leaderboard_vars["name"], level=leaderboard_vars["level"], color=leaderboard_vars["color"], score=score_string, time_date=string_time)
         user_round.put()
         all_rounds = Round.query().fetch()
         all_rounds.insert(0, user_round)

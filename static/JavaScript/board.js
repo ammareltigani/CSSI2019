@@ -1,5 +1,4 @@
 //                  ||Some functions that we will use in the gamer-runner code further below||              //
-
 function generateString(){
   random_words = ["humorous","star","touch","minister","river","brown","horse","parcel","murmur","choose",
                   "notice","swot","care","shop","quick","smell","possessive","faulty",
@@ -178,7 +177,7 @@ let endgame = setInterval(allTilesClaimed, 500);
 function allTilesClaimed(){
   if(num_colored_boxes == original_length)
   {
-    let score = (player_box_count * 6) + (parseInt(time_box.innerHTML, 10) * 3);
+    let score = (player_box_count * 8) + (parseInt(time_box.innerHTML, 10) * 5);
     console.log("Score: "+score);
     changeURL("leaderboard?score=" + score);
   }
