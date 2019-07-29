@@ -4,9 +4,11 @@
   border-radius: 2px;
   border-color: black;
   border-style: solid;
-  width: 525px;
-  left: 450px;
+  height: 300px;
+  width: 700px;
+  left: 350px;
   color: white;
+  font-size: 30px;
   text-align: center;
   font-family: 'Press Start 2P';
   padding: 17px 0;
@@ -18,6 +20,7 @@ body {background-color: yellow;}
 #littlebox{
   text-align: center;
   display: block;
+  margin-left: 410px;
   text-shadow: 1px 1px #000000;
   overflow: hidden;
   white-space: nowrap;
@@ -25,8 +28,8 @@ body {background-color: yellow;}
   background-color: white;
   position: relative;
   opacity: 1;
-  width: 250px;
-  height: 15px;
+  width: 450px;
+  height: 10px;
   font-size: 14px;
   border-radius: 10px;
   font-family: 'Press Start 2P';
@@ -40,7 +43,7 @@ body {background-color: yellow;}
     z-index: -3;
 }
 .stats{
-  margin-left:450px;
+  margin-left:410px;
   font-family: 'Press Start 2P';
   font-size: 15px;
 }
