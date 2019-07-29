@@ -11,6 +11,7 @@
     <h1 id="rectangle"> Leaderboard </h1>
     {% for round in lead %}
       <p id=littlebox style="color: {{ round.color }};background-color:white"; class="stats">Player: {{ round.name }}</p>
+        <p class="stats">Score: {{ round.score }}</p>
         <p class="stats">Level: {{ round.level }}</p>
         <p class="stats">Time: {{ round.time_date }}</p>
       <br>
